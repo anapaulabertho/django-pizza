@@ -1,10 +1,10 @@
 pedidos = [
     {
-        'nome': 'Mario'
+        'nome': 'Mario',
         'sabor': 'Portuguesa'
     },
     {
-        'nome': 'Marco'
+        'nome': 'Marco',
         'sabor': 'Presunto'
     }
 ]
