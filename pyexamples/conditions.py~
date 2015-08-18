@@ -7,7 +7,7 @@ order_description = """
 The client asked for a pizza with less cheese.
 """
 
-if salce.startswith('toma'):
+if salse.startswith('toma'):
     print("it's probably a tomato...")
 else:
     print("not tomato")
