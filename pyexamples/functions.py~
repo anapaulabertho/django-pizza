@@ -1,16 +1,22 @@
 pedidos = []
 
+
 # def nome_da_funcao(): declarar uma funcao
-def adiciona_pedido(nome, sabor):
+def criar_pedido(nome, sabor, observacao=None):
     pedido = {}  # cria um dicionario vazio
     pedido['nome'] = nome  # chave para o dicionario
     pedido['sabor'] = sabor  # chave para o dicionario
+    pedido['observacao'] = observacao
+    return pedido
 
-    pedidos.append(pedido)  # add a variavel pedido ao final da lista
+pedidos.append(criar_pedido('mario', 'pepperoni'))
+pedidos.append(criar_pedido('marco', 'presunto', 'xyz'))
 
-print(pedidos)
+for pedido in pedidos:
+    template = 'Nome: {nome}\nSabor: {sabor}'
+    print(template.format(**pedido))  # ** significa que passa cada argumento 
+# do dicionario como argumento da funcao
+    if pedido['observacao']:
+        print('Observacao: {}'.format(pedido['observacao']))
 
-adiciona_pedido('mario', 'pepperoni')
-adiciona_pedido('marco', 'presunto')
-
-print(pedidos)
+    print('-'*20)
